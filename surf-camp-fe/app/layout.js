@@ -1,5 +1,6 @@
 import "./../sass/main.scss";
-import Header from "./_components/Header";
+import Header from "./_components/Layout/Header";
+import Footer from "./_components/Layout/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
