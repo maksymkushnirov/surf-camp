@@ -18,7 +18,7 @@ const Footer = () => {
     <footer className="footer">
       <nav className="foote__nav">
         <img className="footer__logo" src="/assets/logo.svg" alt="" />
-        <ul className="footer_links">
+        <ul className="footer__links">
           {navItems.map((item) => (
             <li key={item.slug}>
               <Link href={item.slug}>
@@ -35,7 +35,7 @@ const Footer = () => {
               <p className="copy">{policy.display}</p>
             </li>
           ))}
-        </ul>{" "}
+        </ul>
         <p className="copy">© Sam's Surfcamp - all rights reserved</p>
       </div>
     </footer>
