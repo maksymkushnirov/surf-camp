@@ -367,12 +367,19 @@ export interface ApiInfoBlockInfoBlock extends Schema.CollectionType {
     singularName: 'info-block';
     pluralName: 'info-blocks';
     displayName: 'InfoBlock';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     headline: Attribute.String & Attribute.Required;
+    text: Attribute.RichText & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+    showImageRight: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    button: Attribute.Component<'info-block.button'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

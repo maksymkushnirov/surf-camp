@@ -4,7 +4,8 @@
   "info": {
     "singularName": "info-block",
     "pluralName": "info-blocks",
-    "displayName": "InfoBlock"
+    "displayName": "InfoBlock",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,6 +15,30 @@
     "headline": {
       "type": "string",
       "required": true
+    },
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "showImageRight": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "button": {
+      "displayName": "button",
+      "type": "component",
+      "repeatable": false,
+      "component": "info-block.button",
+      "required": false
     }
   }
 }
