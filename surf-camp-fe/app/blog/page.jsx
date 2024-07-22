@@ -1,4 +1,5 @@
 import HighlightArticle from "../_components/Blog/HighlightArticle";
+import SubscribeToNewsletter from "../_components/Blog/SubscribeToNewsletter";
 
 export default function Page(data) {
   const highjightArticleData = {
@@ -19,6 +20,7 @@ export default function Page(data) {
   return (
     <main className="blog-page">
       <HighlightArticle data={highjightArticleData} />
+      <SubscribeToNewsletter />
     </main>
   );
 }
