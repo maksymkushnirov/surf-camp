@@ -13,7 +13,7 @@ const SubscribeToNewsletter = () => {
       <form className="newsletter__form">
         <input
           type="text"
-          className="newsletter__email"
+          className="newsletter__email input"
           placeholder="Enter your E-mail address"
         />
       </form>
