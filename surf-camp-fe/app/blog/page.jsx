@@ -17,7 +17,7 @@ export default function Page(data) {
     featuredImage: "/assets/hero-experience.png",
   };
   return (
-    <main>
+    <main className="blog-page">
       <HighlightArticle data={highjightArticleData} />
     </main>
   );
