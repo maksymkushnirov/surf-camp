@@ -4,7 +4,7 @@ const FeaturedArticle = ({ article }) => {
   return (
     // <h1>{article.headline}</h1>;
 
-    <Link href={`/blog/${article.dlug}`} className="featured-items__article">
+    <Link href={`/blog/${article.slug}`} className="featured-items__article">
       <div className="featured-items__article-img">
         <img
           src={article.featuredImage}
