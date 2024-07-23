@@ -16,10 +16,10 @@ const SubscribeToNewsletter = () => {
           className="newsletter__email input"
           placeholder="Enter your E-mail address"
         />
+        <button className="newsletter__subscribe btn btn--medium btn--turquoise">
+          SUBSCRIBE
+        </button>
       </form>
-      <button className="newsletter__subscribe btn btn--medium btn--turquoise">
-        SUBSCRIBE
-      </button>
     </section>
   );
 };
