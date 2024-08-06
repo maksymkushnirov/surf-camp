@@ -130,6 +130,5 @@ dist
 .pnp.*
 
 # custom
-process.txt
 package.json
 package-lock.json
