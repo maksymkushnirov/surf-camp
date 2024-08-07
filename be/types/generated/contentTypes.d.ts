@@ -682,17 +682,20 @@ export interface ApiBlogArticleBlogArticle extends Schema.CollectionType {
     singularName: 'blog-article';
     pluralName: 'blog-articles';
     displayName: 'Blog Article';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     headline: Attribute.String & Attribute.Required;
-    excerpt: Attribute.Text;
+    excerpt: Attribute.Text & Attribute.Required;
     featuredimage: Attribute.Media & Attribute.Required;
     slug: Attribute.String & Attribute.Required & Attribute.Unique;
     author: Attribute.String & Attribute.Required;
-    isHighlightArticle: Attribute.Boolean;
+    isHighlightArticle: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
