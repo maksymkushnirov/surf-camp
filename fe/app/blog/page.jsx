@@ -1,9 +1,33 @@
+import axios from "axios";
 import HighlightArticle from "../_components/Blog/HighlightArticle";
 import SubscribeToNewsletter from "../_components/Blog/SubscribeToNewsletter";
 import FeaturedItems from "../_components/FeaturedItems/FeaturedItems";
+import { fetchBlogArticles, fetchDataFromStrapi } from "@/utils/strapi.utils";
 
-export default function Page(data) {
-  const highjightArticleData = {
+export default async function Page() {
+  // const blogData = await fetchDataFromStrapi("blog-articles?populate=deep");
+  // const resonse = await axios.get(
+  //   "http://127.0.0.1:1337/api/blog-articles?populate=deep"
+  // );
+
+  // console.log(response);
+
+  const data = await fetchBlogArticles();
+  // console.log(data);
+  // write different queries: first one to find the highlight blog article
+  // find the articles that are not highlight articles but sorted by publishing date.
+
+  // console.log(blogData[0].attributes.featuredImage);
+
+  // console.log(
+  //   blogData.map((article) => ({
+  //     ...article.attributes,
+  //     id: article.id,
+  //     featuredImage: article.attributes.featuredImage.data.attributes.url,
+  //   }))
+  // );
+
+  const highlightArticleData = {
     headline: "3 tips for a super fast takeoff",
     excerpt: (
       <>
@@ -19,7 +43,7 @@ export default function Page(data) {
     featuredImage: "/assets/hero-experience.png",
   };
 
-  const featuredArticles = [
+  const featuredArticlesData = [
     {
       headline:
         "surfboard shaping let us use proper words to lengthen this headlline and design behind the scenes of crafting the perfect board ",
@@ -66,9 +90,11 @@ export default function Page(data) {
 
   return (
     <main className="blog-page">
-      <HighlightArticle data={highjightArticleData} />
+      <HighlightArticle data={highlightArticleData} />
       <SubscribeToNewsletter />
-      <FeaturedItems items={featuredArticles} />
+      <FeaturedItems items={featuredArticlesData} />
     </main>
   );
 }
+
+export const revalidate = 300;

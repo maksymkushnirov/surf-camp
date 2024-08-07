@@ -39,3 +39,23 @@ function createInfoBlockButton(buttonData) {
     </Link>
   );
 }
+
+export async function fetchBlogArticles() {
+  const blogData = await fetchDataFromStrapi("blog-articles?populate=deep");
+  const processedBlogArticles = blogData.map(processBlogArticle);
+
+  processedBlogArticles.sort(
+    (a, z) => new Date(z.publishedAt) - new Date(a.publishedAt)
+  );
+  return processedBlogArticles;
+}
+
+function processBlogArticle(article) {
+  return {
+    ...article.attributes,
+    id: article.id,
+    featuredImage:
+      // featuredImage: article.attributes.featuredImage.data.attributes.url,
+      BASE_URL + article.attributes?.featuredImage?.data?.attributes?.url,
+  };
+}
