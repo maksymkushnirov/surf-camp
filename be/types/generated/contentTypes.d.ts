@@ -690,7 +690,7 @@ export interface ApiBlogArticleBlogArticle extends Schema.CollectionType {
   attributes: {
     headline: Attribute.String & Attribute.Required;
     excerpt: Attribute.Text & Attribute.Required;
-    featuredimage: Attribute.Media & Attribute.Required;
+    featuredImage: Attribute.Media & Attribute.Required;
     slug: Attribute.String & Attribute.Required & Attribute.Unique;
     author: Attribute.String & Attribute.Required;
     isHighlightArticle: Attribute.Boolean &

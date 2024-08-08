@@ -20,7 +20,7 @@
       "type": "text",
       "required": true
     },
-    "featuredimage": {
+    "featuredImage": {
       "type": "media",
       "multiple": false,
       "required": true,

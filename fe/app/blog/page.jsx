@@ -13,7 +13,9 @@ export default async function Page() {
   // console.log(response);
 
   const data = await fetchBlogArticles();
+
   // console.log(data);
+
   // write different queries: first one to find the highlight blog article
   // find the articles that are not highlight articles but sorted by publishing date.
 
