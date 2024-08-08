@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import axios from "axios";
 
 const SubscribeToNewsletter = () => {
   const [email, setEmail] = useState("");
@@ -10,10 +11,11 @@ const SubscribeToNewsletter = () => {
     setEmail(e.target.value);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     // console.log("On submit has been pressed");
+
     if (email.length) {
       // Send Email to Strapi
       setHasSignedUp(true);
@@ -30,7 +32,6 @@ const SubscribeToNewsletter = () => {
         </h4>
       ) : (
         <>
-          {" "}
           <div className="newsletter__info">
             <h4>subscribe to our newsletter</h4>
             <p className="copy">

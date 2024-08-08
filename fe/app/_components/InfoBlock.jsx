@@ -4,11 +4,10 @@ const InfoBlock = ({ data }) => {
   const { headline, text, showImageRight, imageSrc, button } = data;
 
   return (
-    // <></>
     <div className={`info ${showImageRight ? "info--reversed" : ""}`}>
       <img
         className="info__image"
-        src={imageSrc || "/info-blocks/experience.png"}
+        src={imageSrc || "/info-blocks/rectangle.png"}
         alt=""
       />
       <div className="info__text">

@@ -19,4 +19,5 @@ const HeroSection = ({ imgSrc, headline, theme = "turquoise" }) => {
     </section>
   );
 };
+
 export default HeroSection;
