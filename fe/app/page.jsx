@@ -22,7 +22,7 @@ export default async function Home() {
       {infoBlockData.map((data) => (
         <InfoBlock key={data.id} data={data} />
       ))}
-      <BlogPreview />
+      {/* <BlogPreview /> */}
     </main>
   );
 }
