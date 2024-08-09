@@ -17,6 +17,7 @@ export default async function Page({ params }) {
     <main>
       {/* <h1>{article.headline}</h1> */}
       <ArticleIntro article={article} />
+      <ArticleOverview article={article} />
       {/* <section className="article-section">
         <ArticleOverview article={article} />
         {article.articleContent.map((component) => (
