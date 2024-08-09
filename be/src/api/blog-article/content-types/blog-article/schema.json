@@ -42,6 +42,15 @@
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "articleContent": {
+      "type": "dynamiczone",
+      "components": [
+        "blog-article.headline",
+        "blog-article.paragraph-with-image",
+        "blog-article.paragraph",
+        "blog-article.landscape-image"
+      ]
     }
   }
 }
