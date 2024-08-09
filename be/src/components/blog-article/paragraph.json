@@ -1,12 +1,14 @@
 {
   "collectionName": "components_blog_article_paragraphs",
   "info": {
-    "displayName": "paragraph"
+    "displayName": "paragraph",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "paragraph": {
-      "type": "string"
+      "type": "richtext",
+      "required": true
     }
   }
 }

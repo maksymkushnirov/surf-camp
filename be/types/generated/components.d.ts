@@ -44,9 +44,10 @@ export interface BlogArticleParagraph extends Schema.Component {
   collectionName: 'components_blog_article_paragraphs';
   info: {
     displayName: 'paragraph';
+    description: '';
   };
   attributes: {
-    paragraph: Attribute.String;
+    paragraph: Attribute.RichText & Attribute.Required;
   };
 }
 
