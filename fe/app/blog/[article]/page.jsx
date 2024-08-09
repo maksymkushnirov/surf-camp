@@ -1,5 +1,5 @@
 // import ArticleComponent from "@/app/_components/Blog/ArticleComponent";
-// import ArticleIntro from "@/app/_components/Blog/ArticleIntro";
+import ArticleIntro from "@/app/_components/Blog/ArticleIntro";
 // import ArticleOverview from "@/app/_components/Blog/ArticleOverview";
 import FeaturedItems from "@/app/_components/FeaturedItems/FeaturedItems";
 import { fetchBlogArticles, fetchDataFromStrapi } from "@/utils/strapi.utils";
@@ -15,17 +15,18 @@ export default async function Page({ params }) {
 
   return (
     <main>
-      {/* <ArticleIntro article={article} /> */}
-      <section className="article-section">
-        {/* <ArticleOverview article={article} /> */}
-        {/* {article.articleContent.map((component) => (
+      {/* <h1>{article.headline}</h1> */}
+      <ArticleIntro article={article} />
+      {/* <section className="article-section">
+        <ArticleOverview article={article} />
+        {article.articleContent.map((component) => (
           <ArticleComponent key={component.id} component={component} />
-        ))} */}
+        ))}
         <FeaturedItems
           items={moreArticles}
           headline={"Explore our other articles"}
         />
-      </section>
+      </section> */}
     </main>
   );
 }
