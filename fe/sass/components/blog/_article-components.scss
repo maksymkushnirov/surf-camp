@@ -3,48 +3,48 @@
   margin-bottom: 3rem;
 }
 
-// .article-text-image {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-bottom: 6rem;
+.article-text-image {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
 
-//   &--reversed {
-//     flex-direction: row-reverse;
-//   }
+  &--reversed {
+    flex-direction: row-reverse;
+  }
 
-//   &--portrait {
-//     .article-text-image__container {
-//       width: 29%;
-//     }
+  &--portrait {
+    .article-text-image__container {
+      width: 29%;
+    }
 
-//     .article-text-image__text {
-//       width: 68%;
-//     }
-//   }
+    .article-text-image__text {
+      width: 68%;
+    }
+  }
 
-//   &__text {
-//     width: 42%;
-//   }
+  &__text {
+    width: 42%;
+  }
 
-//   &__container {
-//     width: 55%;
-//   }
+  &__container {
+    width: 55%;
+  }
 
-//   &__image {
-//     width: 100%;
-//     height: auto;
+  &__image {
+    width: 100%;
+    height: auto;
 
-//     & img {
-//       height: 100%;
-//       width: 100%;
-//       object-fit: cover;
-//     }
-//   }
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 
-//   &__caption {
-//     color: #686868;
-//   }
-// }
+  &__caption {
+    color: #686868;
+  }
+}
 
 // .article-paragraph {
 //   margin-bottom: 6rem;
