@@ -22,10 +22,10 @@ export default async function Page({ params }) {
         {article.articleContent.map((component) => (
           <ArticleComponent key={component.id} component={component} />
         ))}
-        {/* <FeaturedItems
+        <FeaturedItems
           items={moreArticles}
           headline={"Explore our other articles"}
-        /> */}
+        />
       </section>
     </main>
   );
