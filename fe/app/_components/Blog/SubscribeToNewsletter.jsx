@@ -7,6 +7,8 @@ const SubscribeToNewsletter = () => {
 
   const [hasSignedUp, setHasSignedUp] = useState(false);
 
+  const [showError, setShowError] = useState(false);
+
   const onChange = (e) => {
     setEmail(e.target.value);
   };
@@ -16,9 +18,33 @@ const SubscribeToNewsletter = () => {
 
     // console.log("On submit has been pressed");
 
-    if (email.length) {
-      // Send Email to Strapi
+    try {
+      if (email.length) {
+        // Send Email to Strapi
+
+        await axios.post(
+          `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/newsletter-signups`,
+          {
+            data: {
+              email,
+            },
+          }
+        );
+      }
+
       setHasSignedUp(true);
+    } catch (err) {
+      // await axios.post(
+      //   `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/newsletter-signups`,
+      //   {
+      //     // data: { email: "niklas.com" },
+      //     data: { email },
+      //   }
+      // );
+
+      console.log(err);
+
+      setShowError(true);
     }
 
     // Gibe back feedback to the user that they have signed up.
@@ -26,7 +52,11 @@ const SubscribeToNewsletter = () => {
 
   return (
     <section className="newsletter">
-      {hasSignedUp ? (
+      {showError ? (
+        <h4 className="newsletter__thanks">
+          Could not sign up for the newsletter
+        </h4>
+      ) : hasSignedUp ? (
         <h4 className="newsletter__thanks">
           Thank you for signing up for our newsletter
         </h4>
