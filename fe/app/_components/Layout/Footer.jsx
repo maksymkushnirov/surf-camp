@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   const navItems = [
     { display: "the camp.", slug: "/" },
-    { display: "the experience", slug: "/experience." },
+    { display: "the experience", slug: "/experience" },
     { display: "the blog.", slug: "/blog" },
     { display: "the events.", slug: "/events" },
   ];
